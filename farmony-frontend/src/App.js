@@ -60,7 +60,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>MERN Authentication</h1>
+      <h1>FARMONY</h1>
       <Navbar handleLogout={handleLogout} isAuth={isAuthenticated} />
       <div className="container mt-5">
         <Switch>
