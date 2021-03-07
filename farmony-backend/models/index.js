@@ -1,7 +1,8 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
 
-const { MONGO_URL } = process.env;
+
+const connectionString = process.env.MONGO_URL || "mongodb://localhost:27017/farmony";
 const configOptions = {
     useNewUrlParser: true,
     useCreateIndex: true,
@@ -9,7 +10,7 @@ const configOptions = {
     useFindAndModify: false,
 };
 
-mongoose.connect(MONGO_URL, configOptions)
+mongoose.connect(connectionString, configOptions)
     .then(() => console.log('MongoDB successfully connected...'))
     .catch(err => console.log('MongoDB connection error:', err));
 
