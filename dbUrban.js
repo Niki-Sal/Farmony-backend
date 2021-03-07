@@ -1,11 +1,4 @@
-const gardenSchema = new mongoose.Schema({
-    name: String,
-    image: String,
-    map: String,
-    address: String,
-    state: String,
-    zip: Number
-});
+
 
 const gardenSchema = new mongoose.Schema({
     name: 'Emeryville Community Organic Garden',

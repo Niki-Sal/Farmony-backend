@@ -15,6 +15,7 @@ const userSchema = new Schema({
         required: true,
         minLength: 8
     },
+    farmer: Boolean,
     date: {
         type: Date,
         default: Date.now()
