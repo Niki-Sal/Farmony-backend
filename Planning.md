@@ -20,6 +20,10 @@
 - I want to do a simple browse to find a farm I can check out.
 - I can browser urban farms near me. I can not send messages to farmers or write posts.
 
+#### About Us
+
+The health and wellness industry is currently valued at 4.5 trillion dollars for a reason.  It’s hard not to notice that being healthy today seems to come with a hefty price tag. The purpose of Farmony is to ensure that no one has to go broke to get healthy. Farmony is a social media website for those looking to cut the middle man out of their shopping and buy locally, straight from the source.  Users can buy or trade products with one another, offer or seek help at urban farms, trade recipes or just learn about the farmers in their area. 
+
 ## database Setup
 
 ![Image-1](./assets/diagram.jpeg)
@@ -27,16 +31,22 @@
 ## Wireframe
 
 #### 1
-![Image-2](./assets/wireframe-1.jpg)
+![Image-2](./assets/Farmonynonmemberhomepage.png)
 
 #### 2
-![Image-3](./assets/wireframe-2.jpg)
+![Image-3](./assets/Farmonymemberhomepage.png)
 
 #### 3
-![Image-4](./assets/wireframe-3.jpg)
+![Image-4](./assets/Farmresults.png)
 
 #### 4
-![Image-5](./assets/wireframe-4.jpg)
+![Image-5](./assets/Farmprofile.png)
 
 #### 5
-![Image-6](./assets/wireframe-5.jpg)
+![Image-6](./assets/Userprofile.png)
+
+#### 6
+![Image-7](./assets/Holistichubboard.png)
+
+#### 6
+![Image-8](./assets/Trade.png)
