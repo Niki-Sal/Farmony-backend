@@ -1,7 +1,7 @@
 {
   "name": "farmony-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "The health and wellness industry is currently valued at 4.5 trillion dollars for a reason. It’s hard not to notice that being healthy today seems to come with a hefty price tag. The purpose of Farmony is to ensure that no one has to go broke to get healthy. Farmony is a social media website for those looking to cut the middle man out of their shopping and buy locally, straight from the source. Users can buy or trade products with one another, offer or seek help at urban farms, trade recipes or just learn about the farmers in their area.",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -22,5 +22,13 @@
     "node-fetch": "^2.6.1",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SophiaDipaola/Farmony-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SophiaDipaola/Farmony-backend/issues"
+  },
+  "homepage": "https://github.com/SophiaDipaola/Farmony-backend#readme"
 }
