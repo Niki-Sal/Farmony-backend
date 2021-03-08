@@ -1,10 +1,10 @@
 import axios from 'axios'
 
-const endPoint = ``
+const endPoint = 'http://localhost:8000/api/gardens'
 
 
 
-class PostModel {
+class GardenModel {
     
     static all = () => {
         let request = axios.get(endPoint)
@@ -20,4 +20,4 @@ class PostModel {
     }
 }
 
-export default TodoModel
+export default GardenModel

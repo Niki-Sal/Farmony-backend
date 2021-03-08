@@ -20,10 +20,11 @@ app.use(passport.initialize());
 
 // API Routes
 app.get('/api/', (req, res) => {
-  res.json({ name: 'MERN Auth API', greeting: 'Welcome to the our API', author: 'YOU', message: "Smile, you are being watched by the Backend Engineering Team" });
+  res.json({ name: 'FarmonyAPI', greeting: 'Welcome to the our API', author: 'Farmony Group', message: "Smile, you are being watched by the Backend Engineering Team" });
 });
 
 app.use('/api/examples', routes.example);
+app.use('/api/gardens', routes.garden);
 app.use('/api/users', routes.user);
 
 // Server

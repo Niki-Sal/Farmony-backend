@@ -1,61 +1,56 @@
 const db = require('../models');
 
 const index = (req, res) => {
-    // Purpose: Fetch all examples from DB and return
-    console.log('=====> Inside GET /examples');
+    console.log('=====> Inside GET /gardens');
 
     db.Garden.find({}, (err, foundGardens) => {
-        if (err) console.log('Error in example#index:', err);
+        if (err) console.log('Error in garden#index:', err);
         res.json(foundGardens);
     });
 }
 
 const show = (req, res) => {
-    // Purpose: Fetch one example from DB and return
-    console.log('=====> Inside GET /examples/:id');
+    console.log('=====> Inside GET /gardens/:id');
     console.log('=====> req.params');
-    console.log(req.params); // object used for finding example by id
+    console.log(req.params); 
 
     db.Garden.findById(req.params.id, (err, foundGarden) => {
-        if (err) console.log('Error in example#show:', err);
+        if (err) console.log('Error in garden#show:', err);
         res.json(foundGarden);
     });
 };
 
 const create = (req, res) => {
-    // Purpose: Create one example by adding body to DB, and return
-    console.log('=====> Inside POST /examples');
+    console.log('=====> Inside POST /gardens');
     console.log('=====> req.body');
-    console.log(req.body); // object used for creating new example
+    console.log(req.body); 
 
     db.Garden.create(req.body, (err, savedGarden) => {
-        if (err) console.log('Error in example#create:', err);
+        if (err) console.log('Error in garden#create:', err);
         res.json(savedGarden);
     });
 };
 
 const update = (req, res) => {
-    // Purpose: Update one example in the DB, and return
-    console.log('=====> Inside PUT /examples/:id');
+    console.log('=====> Inside PUT /gardens/:id');
     console.log('=====> req.params');
-    console.log(req.params); // object used for finding example by id
+    console.log(req.params); 
     console.log('=====> req.body');
-    console.log(req.body); // object used for updating example
+    console.log(req.body);
 
     db.Garden.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedGarden) => {
-        if (err) console.log('Error in example#update:', err);
+        if (err) console.log('Error in garden#update:', err);
         res.json(updatedGarden);
     });
 };
 
 const destroy = (req, res) => {
-    // Purpose: Update one example in the DB, and return
-    console.log('=====> Inside DELETE /examples/:id');
+    console.log('=====> Inside DELETE /gardens/:id');
     console.log('=====> req.params');
-    console.log(req.params); // object used for finding example by id
+    console.log(req.params); 
     
     db.Garden.findByIdAndDelete(req.params.id, (err, deletedGarden) => {
-        if (err) console.log('Error in example#destroy:', err);
+        if (err) console.log('Error in garden#destroy:', err);
           res.sendStatus(200);
           console.log(deletedGarden);
     });
