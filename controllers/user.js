@@ -121,6 +121,16 @@ const show = (req, res) => {
         res.json(foundUser);
     });
 };
+const update = (req, res) => {
+    console.log('=====> Inside GET /users/:id');
+    console.log('=====> req.params');
+    console.log(req.params); 
+
+    db.User.updateOne({_id:req.params.id}, req.body, (err, foundUser) => {
+        if (err) console.log('Error in user#update:', err);
+        res.json(foundUser);
+    });
+};
 
 // Exports
 module.exports = {
@@ -130,4 +140,5 @@ module.exports = {
     profile,
     index,
     show,
+    update
 }
