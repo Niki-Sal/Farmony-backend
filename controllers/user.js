@@ -103,10 +103,31 @@ const profile = (req, res) => {
     res.json({ id, name, email });
 }
 
+const index = (req, res) => {
+    console.log('=====> Inside GET /gardens');
+
+    db.User.find({}, (err, foundUser) => {
+        if (err) console.log('Error in garden#index:', err);
+        res.json(foundUser);
+    });
+}
+const show = (req, res) => {
+    console.log('=====> Inside GET /gardens/:id');
+    console.log('=====> req.params');
+    console.log(req.params); 
+
+    db.User.findById(req.params.id, (err, foundUser) => {
+        if (err) console.log('Error in garden#show:', err);
+        res.json(foundUser);
+    });
+};
+
 // Exports
 module.exports = {
     test,
     register,
     login,
     profile,
+    index,
+    show,
 }

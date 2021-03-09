@@ -1,5 +1,10 @@
 const db = require('./models');
 
+const users = [{
+  name: "user2",
+  email: "user2@gmail.com",
+  password: "qwertyuiop"
+}]
 
 const gardens =[
   {
@@ -131,10 +136,10 @@ const gardens =[
 ]
 
 
-db.Garden.deleteMany({}, (err, deletedGardens) => {
-  db.Garden.create(gardens, (err, seededGardens) => {
-    if (err) console.log(err);
-    console.log(seededGardens.length + ' Gardens seeded')
-    process.exit()
-  })
-});
+// db.Garden.deleteMany({}, (err, deletedGardens) => {
+//   db.Garden.create(gardens, (err, seededGardens) => {
+//     if (err) console.log(err);
+//     console.log(seededGardens.length + ' Gardens seeded')
+//     process.exit()
+//   })
+// });
