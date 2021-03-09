@@ -1,5 +1,3 @@
-
-
 const gardenSchema = new mongoose.Schema({
     name: 'Emeryville Community Organic Garden',
     image: 'https://i.imgur.com/2nwo9Bb.jpg',
