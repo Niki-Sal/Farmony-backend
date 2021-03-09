@@ -35,22 +35,22 @@ const gardens =[
   zip: 94118
 },
 {
-  name: 'Mattie & Clarence Boatman Community Grdn',
-  image: 'https://i.imgur.com/bH7iIvF.png',
-  map: 'https://www.google.com/maps/place/Mattie+%26+Clarence+Boatman+Community+Grdn/@37.8676375,-122.511599,17z/data=!3m1!4b1!4m5!3m4!1s0x8085850dfb6c0a7f:0xead834f41e587d12!8m2!3d37.8676333!4d-122.5094103',
-  address: '27-45 Cole Dr',
+  name: 'City Slicker Farms',
+  image: 'https://i.imgur.com/rC9ySZa.png',
+  map: 'https://www.google.com/maps/place/City+Slicker+Farms/@37.8220242,-122.2880418,17z/data=!3m1!4b1!4m5!3m4!1s0x80857e1729e144f1:0x746c5b549756dab6!8m2!3d37.82202!4d-122.2858531',
+  address: '2847 Peralta St',
   state: 'CA',
-  city: 'Sausalito',
-  zip: 94965
+  city: 'Oakland',
+  zip: 94608
 },
 {
-  name: 'Dipsea Gardens At Stinson Beach',
-  image: 'https://i.imgur.com/84COXPH.png',
-  map: 'https://www.google.com/maps/place/Dipsea+Gardens+At+Stinson+Beach/@37.8957092,-122.6385927,17z/data=!3m1!4b1!4m5!3m4!1s0x808593d2d98a053b:0x99d25229bd7dacd!8m2!3d37.895705!4d-122.636404',
-  address: '3265 Shoreline Hwy',
+  name: 'Potrero Hill Community Garden',
+  image: 'https://i.imgur.com/6Y4OoaN.png',
+  map: 'https://www.google.com/maps/place/Potrero+Hill+Community+Garden/@37.759474,-122.4072941,16.88z/data=!4m5!3m4!1s0x808f7e35b34b7ab9:0xd9fb7a6eb3ef2876!8m2!3d37.7598058!4d-122.4052843',
+  address: '780 San Bruno Ave',
   state: 'CA',
-  city: 'Stinson Beach',
-  zip: 94970
+  city: 'San Francisco',
+  zip: 94107
 },
 {
   name: 'Cadillac Urban Gardens on Merritt',
