@@ -94,30 +94,43 @@ const login = async (req, res) => {
 }
 
 // private
-const profile = (req, res) => {
+const profile = async(req, res) => {
     console.log('====> inside /profile');
     console.log(req.body);
     console.log('====> user')
     console.log(req.user);
     const { id, name, email } = req.user; // object with user object inside
-    res.json({ id, name, email });
+    // const about ="about me"
+    console.log("inside profile")
+    const {about} = await db.User.findOne({_id:id})
+    // console.log(sameUser)
+    res.json({ id, name, email, about });
 }
-
+// const messages = async (req, res) => {
+//     console.log('====> inside /messages');
+//     console.log(req.body);
+//     console.log('====> user')
+//     console.log(req.user);
+//     const { id, name, email } = req.user; // object with user object inside
+//     const messageArray = ['message 1', 'message 2', 'message 3', 'message 4', 'message 5', 'message 6', 'message 7', 'message 8', 'message 9'];
+//     const sameUser = await db.User.findOne({ _id: id });
+//     res.json({ id, name, email, message: messageArray, sameUser });
+// }
 const index = (req, res) => {
-    console.log('=====> Inside GET /gardens');
+    console.log('=====> Inside GET /user');
 
     db.User.find({}, (err, foundUser) => {
-        if (err) console.log('Error in garden#index:', err);
+        if (err) console.log('Error in user#index:', err);
         res.json(foundUser);
     });
 }
 const show = (req, res) => {
-    console.log('=====> Inside GET /gardens/:id');
+    console.log('=====> Inside GET /usersss/:id');
     console.log('=====> req.params');
     console.log(req.params); 
 
     db.User.findById(req.params.id, (err, foundUser) => {
-        if (err) console.log('Error in garden#show:', err);
+        if (err) console.log('Error in user#show:', err);
         res.json(foundUser);
     });
 };
