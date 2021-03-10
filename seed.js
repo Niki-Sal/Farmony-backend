@@ -14,7 +14,10 @@ const gardens =[
     address: 'Upper Fort Mason',
     state: 'CA',
     city: 'San Francisco',
-    zip: 94123
+    zip: 94123,
+    about: 'The gardens provide residents with space to grow their own food, herbs and flowers. They are common space for the people of Emeryville to come together in nature, providing refuge and a sense of community. The gardens occasionally host workshops, tours and other events to promote the benefits of community gardening and organic food.',
+    review: ['the Emeryville Community Organic Garden, ECOG, is a huge bonus to living in Emeryville. With the diminutive size of most condos, it\'s great to have a little outside space to plant some veggies and take in the air.', 'We love to walk through this garden whenever we are in the neighborhood.  It\'s fun to look at what each plot has chosen to grow and wonder why they grow what they grow.', 'Total fan! I used to take my dogs around here for walks. They love all the scents that come from this garden. It\'s fascinating to see where the food comes from and how food is grown. I would recommend this place to families and kids who would like to learn more about this organization or visit this garden.']
+    
 },
 {
   name: 'Emeryville Community Organic Garden',
@@ -32,7 +35,8 @@ const gardens =[
   address: 'Between 15th & 16th Ave',
   state: 'CA',
   city: 'San Francisco',
-  zip: 94118
+  zip: 94118,
+
 },
 {
   name: 'City Slicker Farms',
@@ -175,4 +179,4 @@ const seedPosts = () => {
 // }
 
 // seedDB()
-//seedPosts()
+seedPosts()

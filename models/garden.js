@@ -7,7 +7,9 @@ const gardenSchema = new mongoose.Schema({
     map: String,
     address: String,
     state: String,
-    zip: Number
+    zip: Number,
+    about: String,
+    review: Array
 });
 
 
