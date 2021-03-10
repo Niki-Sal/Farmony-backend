@@ -22,6 +22,18 @@ const show = (req, res) => {
     });
 };
 
+const query = (req, res) => {
+    // Purpose: Fetch one example via query from DB and return
+    console.log('=====> Inside "query" POST /examples/query');
+    console.log('=====> req.query');
+    console.log(req.body); // object using for doing a query search on an example
+
+    db.Example.find(req.body, (err, foundExample) => {
+        if (err) console.log('Error in example#query:', err);
+        res.json(foundExample);
+    });
+}
+
 const create = (req, res) => {
     // Purpose: Create one example by adding body to DB, and return
     console.log('=====> Inside POST /examples');
@@ -67,6 +79,7 @@ module.exports = {
     create,
     update,
     destroy,
+    query
 };
 
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -82,3 +95,5 @@ module.exports = {
 //         res.json(foundExample);
 //     });
 // }
+
+

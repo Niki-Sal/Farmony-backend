@@ -59,7 +59,7 @@ const gardens =[
   address: '4601 Merritt St',
   state: 'MI',
   city: 'Detroit',
-  zip: 948209
+  zip: 98209
 },
 {
   name: 'The Michigan Urban Farming Initiative',
@@ -175,4 +175,4 @@ const seedPosts = () => {
 // }
 
 // seedDB()
-seedPosts()
+// seedPosts()
