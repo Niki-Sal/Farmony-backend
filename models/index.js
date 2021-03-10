@@ -19,5 +19,5 @@ module.exports = {
     User: require('./user'),
     Garden: require('./garden'),
     Post: require('./post'),
-    Category: require('./category')
+    Holistic: require('./holistic')
 };

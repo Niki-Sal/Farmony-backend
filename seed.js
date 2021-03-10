@@ -134,12 +134,45 @@ const gardens =[
   zip:  98119
 }
 ]
+const posts = [
+  {
+    title: 'Test Post',
+    username: 'FarmerJimmy6',
+    content: 'Testing...,',
+    category: 'Holistic Hub',
+    date: Date(),
+    comment: []
+  },
+  {
+    title: 'Another Test',
+    username: 'KaleKween_',
+    content: 'Who\'s got some blueberries?',
+    category: 'Holistic Hub',
+    date: Date(),
+    comment: []
+  }
 
 
-// db.Garden.deleteMany({}, (err, deletedGardens) => {
-//   db.Garden.create(gardens, (err, seededGardens) => {
-//     if (err) console.log(err);
-//     console.log(seededGardens.length + ' Gardens seeded')
-//     process.exit()
-//   })
-// });
+]
+
+const seedPosts = () => {
+  db.Post.deleteMany({}, (err, deletedPosts) => {
+    db.Post.create(posts, (err, seededPosts) => {
+      if (err) console.log(err);
+      console.log(seededPosts.length + ' posts seeded.')
+      process.exit()
+    })
+  })
+}
+// const seedDB = () => {
+//   db.Garden.deleteMany({}, (err, deletedGardens) => {
+//     db.Garden.create(gardens, (err, seededGardens) => {
+//       if (err) console.log(err);
+//       console.log(seededGardens.length + ' Gardens seeded')
+//       process.exit()
+//     })
+//   });
+// }
+
+// seedDB()
+//seedPosts()
