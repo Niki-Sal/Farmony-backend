@@ -20,6 +20,19 @@ const show = (req, res) => {
     });
 };
 
+const query = (req, res) => {
+    // Purpose: Fetch one example via query from DB and return
+    console.log('=====> Inside "query" POST /gardens/query');
+    console.log('=====> req.query');
+    console.log(req.body); // object using for doing a query search on an example
+
+    db.Garden.find(req.body, (err, foundGardenZip) => {
+        if (err) console.log('Error in gardens#query:', err);
+        res.json(foundGardenZip);
+    });
+}
+
+
 const create = (req, res) => {
     console.log('=====> Inside POST /gardens');
     console.log('=====> req.body');
@@ -62,4 +75,7 @@ module.exports = {
     create,
     update,
     destroy,
+    query
 };
+
+

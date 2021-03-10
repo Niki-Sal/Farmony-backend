@@ -145,3 +145,5 @@ const gardenSchema = new mongoose.Schema({
     city: 'Seattle',
     zip:  98119
 });
+
+//yeet

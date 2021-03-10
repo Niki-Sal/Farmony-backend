@@ -5,6 +5,7 @@ const ctrl = require('../controllers');
 router.get('/', ctrl.garden.index);
 router.get('/:id', ctrl.garden.show);
 router.post('/', ctrl.garden.create);
+router.post('/query', ctrl.garden.query);
 router.put('/:id', ctrl.garden.update);
 router.delete('/:id', ctrl.garden.destroy);
 
