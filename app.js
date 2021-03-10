@@ -27,6 +27,7 @@ app.use('/api/examples', routes.example);
 app.use('/api/gardens', routes.garden);
 app.use('/api/users', routes.user);
 app.use('/holistichub', routes.holistic)
+app.use('/api/viewpost', routes.viewpost)
 
 // Server
 const server = app.listen(PORT, () => console.log(`Server is running on PORT: ${PORT}`));
