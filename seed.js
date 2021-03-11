@@ -60,7 +60,11 @@ const gardens =[
   state: 'CA',
   city: 'San Francisco',
   zip: 94107,
+<<<<<<< HEAD
   about:' By 1971 two Potrero Hill residents, a meticulous Italian gardener and a Filipino who could grow anything, had begun squatter’s gardens on this land Lorraine Vinson, one of the founding gardeners, has had a plot here fore more than 30 years. She remembers that the gardeners began meeting as a group around 1972. The land, owned by the Recreation and Parks Department, has been a part of the Community Garden Program for many years. Each of the fifty plots is tended by neighbors using only organic methods and the gardeners commit to sharing the upkeep of the common areas, shade garden, and the sidewalk landscapes. We welcome you to visit our garden, one of the few open and unlocked Community Gardens in our city. We trust that you will enjoy the beauty and the view, but please resist the temptation to pick our flowers or produce. Many of us toil for months to produce vegetables that we depend on to help us feed our families.',
+=======
+  about:' By 1971 two Potrero Hill residents, a meticulous Italian gardener and a Filipino who could grow anything, had begun squatters gardens on this land Lorraine Vinson, one of the founding gardeners, has had a plot here fore more than 30 years. She remembers that the gardeners began meeting as a group around 1972. The land, owned by the Recreation and Parks Department, has been a part of the Community Garden Program for many years. Each of the fifty plots is tended by neighbors using only organic methods and the gardeners commit to sharing the upkeep of the common areas, shade garden, and the sidewalk landscapes. We welcome you to visit our garden, one of the few open and unlocked Community Gardens in our city. We trust that you will enjoy the beauty and the view, but please resist the temptation to pick our flowers or produce. Many of us toil for months to produce vegetables that we depend on to help us feed our families.',
+>>>>>>> 7e852e1684f31a140fa9901e0e6dd5de018f9ddd
   review:['"The rose garden is amazing in the summer months - the camellia forest during the rest of the year is equally beautiful.  I highly recommend getting the yearly membership - it allows you access to many gardens throughout the US.  Wandering the gardens is a great way to relax - a true escape from the concrete and hurry.  They also have programs like yoga and pilates.  Children can also enjoy a train ride.  Overall a great escape."','"Amazing community garden. Beautiful park nearby and the most amazing views of all community gardens. Gardeners are super friendly to talk to. When you are finished visiting, you can drive down the REAL crookedest street in SF - Vermont Street!"','"Nice views, calm peaceful place, meditative Oasis in the midst of urban madness."']
 },
 {
@@ -95,7 +99,10 @@ const gardens =[
   zip:  48207,
   about: 'Earthworks Urban Farm seeks to promote sustainable agricultural practices, nutrition and care for the Earth. It is a working study in social justice, as well as in being more connected to the food we eat.',
   review: ['"They care about the community, they help gardeners of all kinds,they teach everything you\'d want to learn about home growing, they\'re kind and generous...I could go on and on"','"Impressive place. A certified organic vegetable farm in the heart of Detroit producing much more than food. Well worth your support."','"It\'s a great community place to get your fresh and local vegetables and fruits."']
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7e852e1684f31a140fa9901e0e6dd5de018f9ddd
 },
 {
   name: 'North Cass Community Garden',
@@ -116,7 +123,11 @@ const gardens =[
   state: 'MI',
   city: 'Detroit',
   zip:  48211,
+<<<<<<< HEAD
   about: 'The nation’s first "Agri-Cultural” urban landscape in Detroit’s North End. The Oakland Avenue Urban Farm, a program of North End Christian Community Development Corporation, is a non-profit,community-base organization dedicated to cultivating healthy foods, sustainable economies, and active cultural environments.',
+=======
+  about: "The nation's first \"Agri-Cultural\" urban landscape in Detroit's North End. The Oakland Avenue Urban Farm, a program of North End Christian Community Development Corporation, is a non-profit,community-base organization dedicated to cultivating healthy foods, sustainable economies, and active cultural environments.",
+>>>>>>> 7e852e1684f31a140fa9901e0e6dd5de018f9ddd
   review:['"Awesome. It\'s amazing what can be done when vision, creativity, and hard work meet. Great job. We are looking forward to seeing the fruit of your labor this season."','"Had a great time attending the Afrikan Funkestra musical event on the farm for the 2016 Detroit Design Festival. Wonderful cultural event, lovely crowd and great food. Took home some delicious strawberry AfroJam!"','"Inspiring urban farm growing beautiful chemical-free produce. If you live in or near Detroit, you should consider joining their CSA. Keep an eye out for events and tours. Grateful to have seen it."']
 },
 {

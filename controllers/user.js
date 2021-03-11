@@ -31,7 +31,8 @@ const register = (req, res) => {
             const newUser = new db.User({
                 name: req.body.name,
                 email: req.body.email,
-                password: req.body.password
+                password: req.body.password,
+                farmer: req.body.farmer
             });
 
             // Salt and hash the password - before saving the user
@@ -72,7 +73,8 @@ const login = async (req, res) => {
             const payload = {
                 id: foundUser.id,
                 email: foundUser.email,
-                name: foundUser.name
+                name: foundUser.name,
+                farmer: foundUser.farmer
             }
 
             jwt.sign(payload, JWT_SECRET, { expiresIn: 3600 }, (err, token) => {
@@ -99,23 +101,14 @@ const profile = async(req, res) => {
     console.log(req.body);
     console.log('====> user')
     console.log(req.user);
-    const { id, name, email } = req.user; // object with user object inside
+    const { id, name, email, farmer } = req.user; // object with user object inside
     // const about ="about me"
     console.log("inside profile")
-    const {about} = await db.User.findOne({_id:id})
+    const {about, photo} = await db.User.findOne({_id:id})
     // console.log(sameUser)
-    res.json({ id, name, email, about });
+    res.json({ id, name, email, about, farmer, photo });
 }
-// const messages = async (req, res) => {
-//     console.log('====> inside /messages');
-//     console.log(req.body);
-//     console.log('====> user')
-//     console.log(req.user);
-//     const { id, name, email } = req.user; // object with user object inside
-//     const messageArray = ['message 1', 'message 2', 'message 3', 'message 4', 'message 5', 'message 6', 'message 7', 'message 8', 'message 9'];
-//     const sameUser = await db.User.findOne({ _id: id });
-//     res.json({ id, name, email, message: messageArray, sameUser });
-// }
+
 const index = (req, res) => {
     console.log('=====> Inside GET /user');
 
