@@ -13,13 +13,16 @@ const index = (req, res) => {
 
 const create = (req, res) => {
     console.log('=====> Post Created')
-    //db.post.create({
-        // title: req.body.title,
-        // username: user.username,
-        // content: req.body.content,
-        // category: 'Holistic Hub',
-        // date: Date,
-    //})
+    db.Post.create({
+        title: req.body.title,
+        name: req.user.name,
+        content: req.body.content,
+        category: req.body.category,
+        date: Date(),
+    },(err, postCreated) => {
+        if (err) console.log('Error in holistic#create', err)
+        res.json(postCreated)
+    })
 }
 
 module.exports = {

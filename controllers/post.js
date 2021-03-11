@@ -27,8 +27,20 @@ const show = (req, res) => {
     });
 };
 
+const create = (req, res) => {
+    console.log('=====> Inside POST /gardens');
+    console.log('=====> req.body');
+    console.log(req.body); 
+
+    db.Post.create(req.body, (err, savedPost) => {
+        if (err) console.log('Error in post#create:', err);
+        res.json(savedPost);
+    });
+};
+
 module.exports = {
     //index,
     index,
     show,
+    create
 };
