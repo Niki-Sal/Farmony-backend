@@ -2,5 +2,6 @@ module.exports = {
   example: require('./example'),
   user: require('./user'),
   garden: require('./garden'),
-  holistic: require('./holistic')
+  holistic: require('./holistic'),
+  buy: require('./buy')
 }

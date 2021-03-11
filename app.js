@@ -26,9 +26,9 @@ app.get('/api/', (req, res) => {
 app.use('/api/examples', routes.example);
 app.use('/api/gardens', routes.garden);
 app.use('/api/users', routes.user);
-app.use('/holistichub', routes.holistic)
-app.use('/localgardens', routes.garden )
-app.use('/farmprofile', routes.garden )
+app.use('api/holistichub', routes.holistic)
+app.use('api/farmprofile', routes.garden )
+app.use('api/buy', routes.buy)
 
 
 // Server
