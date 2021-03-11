@@ -29,6 +29,7 @@ app.use('/api/users', routes.user);
 app.use('/api/holistic', routes.holistic)
 app.use('/api/trade', routes.trade)
 app.use('/api/posts', routes.post)
+app.use('api/volunteer', routes.volunteer)
 
 // Server
 const server = app.listen(PORT, () => console.log(`Server is running on PORT: ${PORT}`));
