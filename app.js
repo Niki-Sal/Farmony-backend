@@ -29,6 +29,7 @@ app.use('/api/users', routes.user);
 app.use('api/holistichub', routes.holistic)
 app.use('api/farmprofile', routes.garden )
 app.use('api/buy', routes.buy)
+app.use('api/volunteer', routes.volunteer)
 
 
 // Server

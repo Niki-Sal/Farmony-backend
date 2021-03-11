@@ -3,7 +3,8 @@ module.exports = {
   user: require('./user'),
   garden: require('./garden'),
   holistic: require('./holistic'),
-  buy: require('./buy')
+  buy: require('./buy'),
+  volunteer: require('./volunteer')
 
 }
   

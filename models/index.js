@@ -20,5 +20,6 @@ module.exports = {
     Garden: require('./garden'),
     Post: require('./post'),
     Holistic: require('./holistic'),
-    Buy: require('./buy')
+    Buy: require('./buy'),
+    Volunteer: require ('./volunteer')
 };
