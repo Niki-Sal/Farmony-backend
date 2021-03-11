@@ -3,5 +3,6 @@ module.exports = {
   user: require('./user'),
   garden: require('./garden'),
   holistic: require('./holistic'),
-  post: require('./post')
+  post: require('./post'),
+  trade: require('./trade')
 }
