@@ -17,7 +17,7 @@ const index = (req, res) => {
 }
 
 const show = (req, res) => {
-    console.log('=====> Inside GET /gardens/:id');
+    console.log('=====> Inside GET /posts/:id');
     console.log('=====> req.params');
     console.log(req.params); 
 
@@ -28,7 +28,7 @@ const show = (req, res) => {
 };
 
 const create = (req, res) => {
-    console.log('=====> Inside POST /gardens');
+    console.log('=====> Inside POST /posts');
     console.log('=====> req.body');
     console.log(req.body); 
 
