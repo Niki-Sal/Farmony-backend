@@ -43,17 +43,18 @@ const update = async (req, res) => {
     console.log('=====> req.params');
     console.log(req.params); 
 
-    const newComment = await new Comment(req.body)
+    console.log('********* REQ PARAMS', req.params.id)
+    console.log('********* REQ BODY', req.body.comment)
 
-    await db.Post.findByIdAndUpdate({_id:req.params.id}, newComment, (err, foundPost) => {
-        
-        foundPost.comment.push(newComment)
-        foundPost.save()
-        if (err) console.log('Error in post#update:', err);
-        
-        res.json(foundPost);
-    })
-
+   const foundPost = await db.Post.findById({_id:req.params.id})
+   foundPost.comment.push({
+        name: req.body.comment.name,
+        photo: req.body.comment.photo,
+        content: req.body.comment.content,
+        date: req.body.comment.date
+   })
+   console.log('************COMMENT ADDED')
+   console.log(foundPost)
 };
 
 module.exports = {
