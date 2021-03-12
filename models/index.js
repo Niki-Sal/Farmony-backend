@@ -21,5 +21,6 @@ module.exports = {
     Post: require('./post'),
     Holistic: require('./holistic'),
     Trade: require('./trade'),
-    Volunteer: require('./volunteer')
+    Volunteer: require('./volunteer'),
+    Buy: require('./buy')
 };
