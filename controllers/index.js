@@ -5,5 +5,6 @@ module.exports = {
   holistic: require('./holistic'),
   post: require('./post'),
   trade: require('./trade'),
-  volunteer: require('./volunteer')
+  volunteer: require('./volunteer'),
+  buy: require('./buy')
 }
