@@ -1,10 +1,12 @@
 const router = require('express').Router();
 const ctrl = require('../controllers');
+const passport = require('passport')
 
 //routes
 router.get('/', ctrl.post.index)
 router.get('/:id', ctrl.post.show)
-router.post('/', ctrl.post.create)
+router.post('/', passport.authenticate('jwt', { session: false }), ctrl.post.create)
+router.put('/:id', ctrl.post.update)
 
 
 module.exports = router;

@@ -38,9 +38,28 @@ const create = (req, res) => {
     });
 };
 
+const update = async (req, res) => {
+    console.log('=====> Inside GET /users/:id');
+    console.log('=====> req.params');
+    console.log(req.params); 
+
+    const newComment = await new Comment(req.body)
+
+    await db.Post.findByIdAndUpdate({_id:req.params.id}, newComment, (err, foundPost) => {
+        
+        foundPost.comment.push(newComment)
+        foundPost.save()
+        if (err) console.log('Error in post#update:', err);
+        
+        res.json(foundPost);
+    })
+
+};
+
 module.exports = {
     //index,
     index,
     show,
-    create
+    create,
+    update
 };
