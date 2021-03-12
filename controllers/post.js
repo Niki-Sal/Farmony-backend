@@ -44,15 +44,16 @@ const update = async (req, res) => {
     console.log(req.params); 
 
     console.log('********* REQ PARAMS', req.params.id)
-    console.log('********* REQ BODY', req.body.comment)
+    console.log('********* REQ BODY', req.body)
 
    const foundPost = await db.Post.findById({_id:req.params.id})
    foundPost.comment.push({
-        name: req.body.comment.name,
-        photo: req.body.comment.photo,
-        content: req.body.comment.content,
-        date: req.body.comment.date
+        name: req.body.name,
+        photo: req.body.photo,
+        content: req.body.content,
+        date: req.body.date
    })
+   await foundPost.save()
    console.log('************COMMENT ADDED')
    console.log(foundPost)
 };
