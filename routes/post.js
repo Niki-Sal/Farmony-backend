@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const ctrl = require('../controllers');
+const passport = require('passport')
 
 //routes
 router.get('/', ctrl.post.index)

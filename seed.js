@@ -183,15 +183,15 @@ const posts = [
 
 ]
 
-// const seedPosts = () => {
-//   db.Post.deleteMany({}, (err, deletedPosts) => {
-//     db.Post.create(posts, (err, seededPosts) => {
-//       if (err) console.log(err);
-//       console.log(seededPosts.length + ' posts seeded.')
-//       process.exit()
-//     })
-//   })
-// }
+const seedPosts = () => {
+  db.Post.deleteMany({}, (err, deletedPosts) => {
+    db.Post.create(posts, (err, seededPosts) => {
+      if (err) console.log(err);
+      console.log(seededPosts.length + ' posts seeded.')
+      process.exit()
+    })
+  })
+}
 const seedDB = () => {
   db.Garden.deleteMany({}, (err, deletedGardens) => {
     db.Garden.create(gardens, (err, seededGardens) => {
@@ -202,5 +202,5 @@ const seedDB = () => {
   });
 }
 
-// seedDB()
-//seedPosts()
+seedDB()
+seedPosts()
