@@ -5,8 +5,13 @@ const routes = require('./routes');
 const cors = require('cors');
 const passport = require('passport');
 require('./config/passport')(passport);
-
-// App Set ups
+/////
+var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+var methodOverride = require('method-override')
+const imagesController = require('./controllers/images');
+//////
+// App Set up
 const app = express();
 const PORT = process.env.PORT || 8000;
 
@@ -15,7 +20,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json()); // JSON parsing
 app.use(cors()); // allow all CORS requests
 app.use(passport.initialize());
-
+//////
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(methodOverride('_method'));
+//////
 
 
 // API Routes
@@ -29,10 +39,10 @@ app.use('/api/users', routes.user);
 app.use('/api/holistichub', routes.holistic)
 app.use('/api/farmprofile', routes.garden )
 app.use('/api/buy', routes.buy)
-app.use('/api/volunteer', routes.volunteer)
 app.use('/api/trade', routes.trade)
-app.use('/api/holistic', routes.holistic)
 app.use('/api/posts', routes.post)
+app.use('api/volunteer', routes.volunteer)
+app.use('/images', imagesController); 
 
 // Server
 const server = app.listen(PORT, () => console.log(`Server is running on PORT: ${PORT}`));
