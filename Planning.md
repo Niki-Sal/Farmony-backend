@@ -48,5 +48,14 @@ The health and wellness industry is currently valued at 4.5 trillion dollars for
 #### 6
 ![Image-7](./assets/Holistichubboard.png)
 
-#### 6
+#### 7
 ![Image-8](./assets/Trade.png)
+
+#### 8
+![Image-8](./assets/CreatePost.png)
+
+#### 9
+![Image-8](./assets/CreateProfile.png)
+
+#### 10
+![Image-8](./assets/ViewPost.png)

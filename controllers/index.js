@@ -4,5 +4,7 @@ module.exports = {
   garden: require('./garden'),
   holistic: require('./holistic'),
   buy: require('./buy'),
-  post: require('./post')
+  post: require('./post'),
+  trade: require('./trade'),
+  volunteer: require('./volunteer')
 }

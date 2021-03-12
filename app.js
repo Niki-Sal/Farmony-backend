@@ -6,7 +6,7 @@ const cors = require('cors');
 const passport = require('passport');
 require('./config/passport')(passport);
 
-// App Set up
+// App Set ups
 const app = express();
 const PORT = process.env.PORT || 8000;
 
@@ -26,16 +26,13 @@ app.get('/api/', (req, res) => {
 app.use('/api/examples', routes.example);
 app.use('/api/gardens', routes.garden);
 app.use('/api/users', routes.user);
-<<<<<<< HEAD
-app.use('api/holistichub', routes.holistic)
-app.use('api/farmprofile', routes.garden )
-app.use('api/buy', routes.buy)
-app.use('api/volunteer', routes.volunteer)
-
-=======
+app.use('/api/holistichub', routes.holistic)
+app.use('/api/farmprofile', routes.garden )
+app.use('/api/buy', routes.buy)
+app.use('/api/volunteer', routes.volunteer)
+app.use('/api/trade', routes.trade)
 app.use('/api/holistic', routes.holistic)
 app.use('/api/posts', routes.post)
->>>>>>> 7e852e1684f31a140fa9901e0e6dd5de018f9ddd
 
 // Server
 const server = app.listen(PORT, () => console.log(`Server is running on PORT: ${PORT}`));

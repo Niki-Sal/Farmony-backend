@@ -11,11 +11,12 @@ const commentSchema = new mongoose.Schema({
 
 const postSchema = new mongoose.Schema({
     title: String,
-    profilePhoto: String,
-    username: String,
+    photo: String,
+    name: String,
     content: String,
     category: String,
     date: Date,
+    postType: String,
     comment: [commentSchema]
 });
 
