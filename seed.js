@@ -136,20 +136,20 @@ const gardens =[
 ]
 const posts = [
   {
-    title: 'Test Post',
+    title: 'Test Comment',
     username: 'FarmerJimmy6',
     content: 'Testing...,',
     category: 'Holistic Hub',
     date: Date(),
-    comment: []
+    comment: [{name: 'Farmer Jimmy', content:'Test', date: Date()},{name: 'Farmer Jimmy', content:'Testing 2', date: Date()}]
   },
   {
-    title: 'Another Test',
+    title: 'Comment Test',
     username: 'KaleKween_',
     content: 'Who\'s got some blueberries?',
     category: 'Holistic Hub',
     date: Date(),
-    comment: []
+    comment: [{name: 'KaleKween_', content:'Doin a test', date: Date()}]
   }
 
 
@@ -175,4 +175,4 @@ const seedPosts = () => {
 // }
 
 // seedDB()
-//seedPosts()
+seedPosts()
