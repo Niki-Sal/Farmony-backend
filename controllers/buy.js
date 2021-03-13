@@ -31,9 +31,9 @@ const show = (req, res) => {
     console.log('=====> req.params');
     console.log(req.params); 
 
-    db.Post.findById(req.params.id, (err, foundUser) => {
-        if (err) console.log('Error in user#show:', err);
-        res.json(foundUser);
+    db.Post.findById(req.params.id, (err, foundPost) => {
+        if (err) console.log('Error in buy#show:', err);
+        res.json(foundPost);
     });
 }
 
