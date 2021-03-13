@@ -24,8 +24,36 @@ const create = (req, res) => {
         res.json(postCreated)
     })
 }
+const show = (req, res) => {
+    console.log('=====> Inside GET /buy/:id');
+    console.log('=====> req.params');
+    console.log(req.params); 
+
+    db.Post.findById(req.params.id, (err, foundPost) => {
+        if (err) console.log('Error in holistic#show:', err);
+        res.json(foundPost);
+    });
+}
+
+const update = (req, res) => {
+    // Purpose: Update one example in the DB, and return
+    console.log('=====> Inside PUT /holistic/:id');
+    console.log('=====> req.params');
+    console.log(req.params); // object used for finding example by id
+    console.log('=====> req.body');
+    console.log(req.body); // object used for updating example
+  
+  
+
+    db.Post.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedPost) => {
+        if (err) console.log('Error in holistic#update:', err);
+        res.json(updatedPost);
+    });
+};
 
 module.exports = {
     index,
-    create
+    create,
+    show,
+    update,
 };
