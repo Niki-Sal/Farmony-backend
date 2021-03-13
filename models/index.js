@@ -15,12 +15,11 @@ mongoose.connect(connectionString, configOptions)
     .catch(err => console.log('MongoDB connection error:', err));
 
 module.exports = {
-    Example: require('./example'),
     User: require('./user'),
-    Garden: require('./garden'),
     Post: require('./post'),
+    Garden: require('./garden'),
     Holistic: require('./holistic'),
     Trade: require('./trade'),
-    Volunteer: require('./volunteer'),
-    Buy: require('./buy')
+    Buy: require('./buy'),
+    Volunteer: require('./volunteer')
 };

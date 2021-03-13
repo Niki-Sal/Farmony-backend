@@ -5,12 +5,11 @@ const routes = require('./routes');
 const cors = require('cors');
 const passport = require('passport');
 require('./config/passport')(passport);
-/////
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var methodOverride = require('method-override')
 const imagesController = require('./controllers/images');
-//////
+
 // App Set up
 const app = express();
 const PORT = process.env.PORT || 8000;
@@ -20,12 +19,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json()); // JSON parsing
 app.use(cors()); // allow all CORS requests
 app.use(passport.initialize());
-//////
 app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(methodOverride('_method'));
-//////
 
 
 // API Routes
@@ -33,9 +30,10 @@ app.get('/api/', (req, res) => {
   res.json({ name: 'FarmonyAPI', greeting: 'Welcome to the our API', author: 'Farmony Group', message: "Smile, you are being watched by the Backend Engineering Team" });
 });
 
-app.use('/api/examples', routes.example);
-app.use('/api/gardens', routes.garden);
+
 app.use('/api/users', routes.user);
+app.use('/api/posts', routes.post)
+app.use('/api/gardens', routes.garden);
 app.use('/api/holistic', routes.holistic)
 app.use('/api/trade', routes.trade)
 app.use('/api/posts', routes.post)

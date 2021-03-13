@@ -167,7 +167,7 @@ const posts = [
     title: 'Test Comment',
     username: 'FarmerJimmy6',
     content: 'Testing...,',
-    category: 'Holistic Hub',
+    category: 'Buy',
     date: Date(),
     comment: [{name: 'Farmer Jimmy', content:'Test', date: Date()},{name: 'Farmer Jimmy', content:'Testing 2', date: Date()}]
   },
@@ -175,7 +175,7 @@ const posts = [
     title: 'Comment Test',
     username: 'KaleKween_',
     content: 'Who\'s got some blueberries?',
-    category: 'Holistic Hub',
+    category: 'Buy',
     date: Date(),
     comment: [{name: 'KaleKween_', content:'Doin a test', date: Date()}]
   }

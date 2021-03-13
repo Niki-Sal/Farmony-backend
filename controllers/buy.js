@@ -10,8 +10,9 @@ const index = (req, res) => {
         res.json(foundPosts)
     })
 }
+
 const create = (req, res) => {
-    console.log('=====> Post Created')
+    console.log('=====> Trade Created')
     db.Post.create({
         title: req.body.title,
         name: req.user.name,
@@ -24,7 +25,37 @@ const create = (req, res) => {
         res.json(postCreated)
     })
 }
+
+const show = (req, res) => {
+    console.log('=====> Inside GET /buy/:id');
+    console.log('=====> req.params');
+    console.log(req.params); 
+
+    db.Post.findById(req.params.id, (err, foundUser) => {
+        if (err) console.log('Error in user#show:', err);
+        res.json(foundUser);
+    });
+}
+
+const update = (req, res) => {
+    // Purpose: Update one example in the DB, and return
+    console.log('=====> Inside PUT /buy/:id');
+    console.log('=====> req.params');
+    console.log(req.params); // object used for finding example by id
+    console.log('=====> req.body');
+    console.log(req.body); // object used for updating example
+  
+  
+
+    db.Post.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedPost) => {
+        if (err) console.log('Error in post#update:', err);
+        res.json(updatedPost);
+    });
+};
+
 module.exports = {
     index,
-    create
+    create,
+    show,
+    update,
 };
