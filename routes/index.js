@@ -1,11 +1,10 @@
 module.exports = {
-  example: require('./example'),
   user: require('./user'),
+  post: require('./post'),
   garden: require('./garden'),
   holistic: require('./holistic'),
-  post: require('./post'),
   trade: require('./trade'),
+  buy: require('./buy'),
   volunteer: require('./volunteer')
-
 }
   
