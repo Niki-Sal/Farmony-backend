@@ -39,7 +39,7 @@ const show = (req, res) => {
 
 const update = (req, res) => {
     // Purpose: Update one example in the DB, and return
-    console.log('=====> Inside PUT /buy/:id');
+    console.log('=====> Inside PUT /trade/:id');
     console.log('=====> req.params');
     console.log(req.params); // object used for finding example by id
     console.log('=====> req.body');
