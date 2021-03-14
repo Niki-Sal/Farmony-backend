@@ -12,7 +12,7 @@ const index = (req, res) => {
 }
 
 const create = (req, res) => {
-    console.log('=====> Trade Created')
+    console.log('=====> Buy Created')
     db.Post.create({
         title: req.body.title,
         name: req.user.name,

@@ -31,11 +31,12 @@ app.get('/api/', (req, res) => {
 });
 
 
-app.use('/api/users', routes.user);
-app.use('/api/posts', routes.post)
+
 app.use('/api/gardens', routes.garden);
+app.use('/api/users', routes.user);
 app.use('/api/holistic', routes.holistic)
 app.use('/api/trade', routes.trade)
+app.use('/api/buy', routes.buy)
 app.use('/api/posts', routes.post)
 app.use('/api/volunteer', routes.volunteer)
 app.use('/api/buy', routes.buy)
