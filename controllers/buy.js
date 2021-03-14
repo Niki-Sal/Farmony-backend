@@ -32,7 +32,7 @@ const show = (req, res) => {
     console.log(req.params); 
 
     db.Post.findById(req.params.id, (err, foundUser) => {
-        if (err) console.log('Error in user#show:', err);
+        if (err) console.log('Error in buy#show:', err);
         res.json(foundUser);
     });
 }
@@ -48,7 +48,7 @@ const update = (req, res) => {
   
 
     db.Post.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedPost) => {
-        if (err) console.log('Error in post#update:', err);
+        if (err) console.log('Error in buy#update:', err);
         res.json(updatedPost);
     });
 };

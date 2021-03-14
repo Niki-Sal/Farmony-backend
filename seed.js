@@ -203,4 +203,4 @@ const seedDB = () => {
 }
 
 seedDB()
-seedPosts()
+// seedPosts()
