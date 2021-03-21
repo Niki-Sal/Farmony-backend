@@ -101,11 +101,11 @@ const profile = async(req, res) => {
     console.log(req.body);
     console.log('====> user')
     console.log(req.user);
-    const { id, name, email, farmer } = req.user; // object with user object inside
-    // const about ="about me"
+    const { id, name, email, farmer } = req.user; 
+    
+    //////////////////
     console.log("inside profile")
     const {about, photo} = await db.User.findOne({_id:id})
-    // console.log(sameUser)
     res.json({ id, name, email, about, farmer, photo });
 }
 
