@@ -18,6 +18,12 @@ const PORT = process.env.PORT || 8000;
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json()); // JSON parsing
 app.use(cors()); // allow all CORS requests
+
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
+
 app.use(passport.initialize());
 app.use(bodyParser.urlencoded({
   extended: true
