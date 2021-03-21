@@ -46,7 +46,7 @@ app.use('/api/trade', routes.trade)
 app.use('/api/buy', routes.buy)
 app.use('/api/posts', routes.post)
 app.use('/api/volunteer', routes.volunteer)
-app.use('/images', imagesController); 
+app.use('/api/images', imagesController); 
 
 // Server
 const server = app.listen(PORT, () => console.log(`Server is running on PORT: ${PORT}`));
