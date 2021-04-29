@@ -19,8 +19,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json()); // JSON parsing
 app.use(cors()); // allow all CORS requests
 
-
-
 app.use(passport.initialize());
 app.use(bodyParser.urlencoded({
   extended: true
