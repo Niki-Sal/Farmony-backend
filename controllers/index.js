@@ -6,5 +6,6 @@ module.exports = {
   buy: require('./buy'),
   post: require('./post'),
   trade: require('./trade'),
-  volunteer: require('./volunteer')
+  volunteer: require('./volunteer'),
+  contact: require('./contact')
 }

@@ -81,7 +81,7 @@ const login = async (req, res) => {
                 if (err) {
                     res.status(400).json({ message: 'Session has endedd, please log in again'});
                 }
-                const legit = jwt.verify(token, JWT_SECRET, { expiresIn: 60 });
+                const legit = jwt.verify(token, JWT_SECRET, { expiresIn: 525600 });
                 console.log('===> legit');
                 console.log(legit);
                 res.json({ success: true, token: `Bearer ${token}`, userData: legit });
